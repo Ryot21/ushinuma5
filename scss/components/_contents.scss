@@ -1,0 +1,216 @@
+// コンテンツ
+.c-container{
+	width: 100vw;
+	height: auto;
+}
+
+.c-contents{
+	&-inner{
+		width: 90%;
+		margin: auto;
+		@include min(768){
+			width: 95%;
+		}
+	}
+
+
+	&.-f-slider,//スライダー
+	&.-f-view{  //ファーストビュー
+		width: 100%;
+		height: auto;
+		@include min(768){
+			// min-height: 480px;
+		}
+	}
+	&.-f-slider{// スライダー
+		position: relative;
+		.c-contentsBox{
+			position: absolute;
+			// ファーストビュー×スライダー関係
+			&.-f-title{
+				top: 27%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 80%;
+				filter: drop-shadow(.5px .5px 0px #ffffff6c);
+				@include min(768){// tb
+					top: 50%;
+					left: 80%;
+					width: 33%;
+				}
+				@include min(1400){
+					top: 50%;
+					left: 70%;
+					width: 30%;
+				}
+			}
+			&.-f-des{
+				bottom: 1px;
+				left: 90%;
+				transform: translateX(-50%);
+				white-space: nowrap;
+				// width: auto;
+				@include min(768){
+					left: 60%;
+					transform: scale(.8);
+				}
+				&.-w{
+					@include min(768){
+						left: 53%;
+					}
+					@include min(1400){
+						left: 72%;
+					}
+				}
+			}
+			&.-f-bird{
+				&_01{// 青
+					top: 20%;
+					left: 15%;
+					width: 5%;
+					@include min(768){// tb
+						top: 10%;
+						left: 2%;
+						width: 4%;
+					}
+					@include min(1400){// pc
+						top: 10%;
+						left: 15%;
+						width: 3%;
+					}
+				}
+				&_02{// うすい
+					top: 20%;
+					left: 23%;
+					width: 3%;
+					@include min(768){// tb
+						top: 7%;
+						left: 7%;
+						width: 3%;
+					}
+					@include min(1400){// pc
+						left: 18%;
+						width: 2%;
+					}
+				}
+				&_03{// 黄色
+					top: 35%;
+					left: 77%;
+					width: 5%;
+					@include min(768){// tb
+						top: 23.5%;
+						left: 91%;
+						width: 2%;
+					}
+					@include min(1400){// pc
+						top: 13.5%;
+						left: 78%;
+						width: 1.8%;
+					}
+				}
+				&_04{// 緑
+					@include min(768){// tb
+						top: 57%;
+						left: 65%;
+						width: 1.5%;
+					}
+					@include min(1400){// pc
+						top: 60%;
+						left: 56%;
+						width: 1%;
+					}
+				}
+			}
+			&.-f-border{
+				top: 36%;
+				left: 25%;
+				width: 50%;
+				@include min(768){// tb
+					top: 25%;
+					left: 67%;
+					width: 24%;
+				}
+				@include min(1400){// pc
+					top: 17%;
+					left: 60%;
+					width: 18%;
+				}
+			}
+		}
+	}
+	&.-f-view{//ファーストビュー
+		position: relative;
+		overflow: hidden;
+		.c-contentsBox{
+			position: absolute;
+			&.-f-cv{
+				@include min(768){
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+				}
+			}
+			&.-f-text{
+				top: 78%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 85%;
+				@include min(768){
+					top: 50%;
+					left: 75%;
+					width: 35%;
+				}
+			}
+			&.-f-new{
+				top:0;
+				left: 5%;
+				width: 10%;
+				@include min(768){
+					width: 5%;
+				}
+			}
+		}
+	}
+
+
+	&.-imgBg{//背景画像
+		position: relative;
+		.c-contentsBox{
+			position: absolute;
+			// ヘッダーロゴ
+			&.-logo{
+				&-item01{//緑色の鳥
+					top: 54%;
+					left: 95.5%;
+					width: 5%;
+					@include min(768){
+						top: 17.5%;
+						left: 30.8%;
+						width: 2.3%;
+					}
+				}
+				&-item02{//黄色の鳥
+					top: 45%;
+					left: 100%;
+					width: 5%;
+					@include min(768){
+						top: 10%;
+						left: 33%;
+						width: 1.5%;
+					}
+				}
+			}
+			// ファーストビュー > ロゴ
+			&.-f-logo_s{
+				@include max(768){
+					top: 8%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 60%;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
